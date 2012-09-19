@@ -24,3 +24,6 @@ Create an instance of the UIMonthYearPicker manually.
 ## Sample Screenshots
 <img src="https://github.com/jeksys/EYMonthYearPicker/raw/master/Screenshots/UIMonthYearPicker_setup.png">
 <img src="https://github.com/jeksys/EYMonthYearPicker/raw/master/Screenshots/sample.png">
+
+## Credits
+base on the souce code by Igor Fedorchuk  http://stackoverflow.com/questions/3348247/uidatepicker-select-month-and-year
