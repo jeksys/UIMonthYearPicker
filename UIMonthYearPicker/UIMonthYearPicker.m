@@ -105,7 +105,7 @@ const NSInteger numberOfComponents = 2;
     components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:aDate];
     dateYear = [components year];
     
-    [self selectRow: dateMonth
+    [self selectRow: dateMonth - 1
         inComponent: MONTH
            animated: NO];
     
