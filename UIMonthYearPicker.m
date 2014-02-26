@@ -21,9 +21,9 @@
 
 @interface UIMonthYearPicker ()
 
-@property (nonatomic, strong) NSIndexPath * todayIndexPath;
-@property (nonatomic, strong) NSArray * months;
-@property (nonatomic, strong) NSArray * years;
+@property (nonatomic, strong) NSIndexPath *todayIndexPath;
+@property (nonatomic, strong) NSArray *months;
+@property (nonatomic, strong) NSArray *years;
 
 - (NSArray *) nameOfYears;
 - (NSArray *) nameOfMonths;
@@ -49,6 +49,7 @@ const NSInteger numberOfComponents = 2;
 
 @synthesize todayIndexPath;
 @synthesize months;
+@synthesize _delegate = _privateDelegate;
 @synthesize years = _years;
 @synthesize maximumDate;
 @synthesize minimumDate;
@@ -74,7 +75,7 @@ const NSInteger numberOfComponents = 2;
 
 - (void) setMaximumDate:(NSDate *)aMaximumDate
 {
-    NSDateComponents * components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:aMaximumDate];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:aMaximumDate];
 
     maxYear = [components year];
     if (maxYear < minYear)
@@ -90,7 +91,7 @@ const NSInteger numberOfComponents = 2;
 
 - (void) setMinimumDate:(NSDate *)aMinimumDate
 {
-    NSDateComponents * components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:aMinimumDate];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:aMinimumDate];
 
     minYear = [components year];
     if (maxYear < minYear)
@@ -113,7 +114,7 @@ const NSInteger numberOfComponents = 2;
     int dateYear;
     int dateMonth;
 
-    NSDateComponents * components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit fromDate:aDate];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit fromDate:aDate];
 
     dateMonth = [components month];
     components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit fromDate:aDate];
@@ -137,13 +138,13 @@ const NSInteger numberOfComponents = 2;
 - (NSDate *) date
 {
     NSInteger monthCount = [self.months count];
-    NSString * month = [self.months objectAtIndex:([self selectedRowInComponent:MONTH] % monthCount)];
+    NSString *month = [self.months objectAtIndex:([self selectedRowInComponent:MONTH] % monthCount)];
 
     NSInteger yearCount = [self.years count];
-    NSString * year = [self.years objectAtIndex:([self selectedRowInComponent:YEAR] % yearCount)];
+    NSString *year = [self.years objectAtIndex:([self selectedRowInComponent:YEAR] % yearCount)];
 
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] init]; [formatter setDateFormat:@"MMMM:yyyy"];
-    NSDate * date = [formatter dateFromString:[NSString stringWithFormat:@"%@:%@", month, year]];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init]; [formatter setDateFormat:@"MMMM:yyyy"];
+    NSDate *date = [formatter dateFromString:[NSString stringWithFormat:@"%@:%@", month, year]];
 
     return date;
 }
@@ -165,8 +166,8 @@ const NSInteger numberOfComponents = 2;
     if (component == MONTH)
     {
         NSInteger monthCount = [self.months count];
-        NSString * monthName = [self.months objectAtIndex:(row % monthCount)];
-        NSString * currentMonthName = [self currentMonthName];
+        NSString *monthName = [self.months objectAtIndex:(row % monthCount)];
+        NSString *currentMonthName = [self currentMonthName];
         if ([monthName isEqualToString:currentMonthName] == YES)
         {
             selected = YES;
@@ -175,15 +176,15 @@ const NSInteger numberOfComponents = 2;
     else
     {
         NSInteger yearCount = [self.years count];
-        NSString * yearName = [self.years objectAtIndex:(row % yearCount)];
-        NSString * currenrYearName  = [self currentYearName];
+        NSString *yearName = [self.years objectAtIndex:(row % yearCount)];
+        NSString *currenrYearName  = [self currentYearName];
         if ([yearName isEqualToString:currenrYearName] == YES)
         {
             selected = YES;
         }
     }
 
-    UILabel * returnView = nil;
+    UILabel *returnView = nil;
     if (view.tag == LABEL_TAG)
     {
         returnView = (UILabel *) view;
@@ -261,7 +262,7 @@ const NSInteger numberOfComponents = 2;
 {
     CGRect frame = CGRectMake(0.f, 0.f, [self componentWidth], rowHeight);
 
-    UILabel * label = [[UILabel alloc] initWithFrame:frame];
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
 
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
@@ -274,18 +275,18 @@ const NSInteger numberOfComponents = 2;
 
 - (NSArray *) nameOfMonths
 {
-    NSDateFormatter * dateFormatter = [NSDateFormatter new];
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
 
     return [dateFormatter standaloneMonthSymbols];
 }
 
 - (NSArray *) nameOfYears
 {
-    NSMutableArray * years = [NSMutableArray array];
+    NSMutableArray *years = [NSMutableArray array];
 
     for (NSInteger year = minYear; year <= maxYear; year++)
     {
-        NSString * yearStr = [NSString stringWithFormat:@"%i", year];
+        NSString *yearStr = [NSString stringWithFormat:@"%i", year];
         [years addObject:yearStr];
     }
     return years;
@@ -307,11 +308,11 @@ const NSInteger numberOfComponents = 2;
     CGFloat row = 0.f;
     CGFloat section = 0.f;
 
-    NSString * month = [self currentMonthName];
-    NSString * year  = [self currentYearName];
+    NSString *month = [self currentMonthName];
+    NSString *year  = [self currentYearName];
 
     // set table on the middle
-    for (NSString * cellMonth in self.months)
+    for (NSString *cellMonth in self.months)
     {
         if ([cellMonth isEqualToString:month])
         {
@@ -321,7 +322,7 @@ const NSInteger numberOfComponents = 2;
         }
     }
 
-    for (NSString * cellYear in self.years)
+    for (NSString *cellYear in self.years)
     {
         if ([cellYear isEqualToString:year])
         {
@@ -336,7 +337,7 @@ const NSInteger numberOfComponents = 2;
 
 - (NSString *) currentMonthName
 {
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 
     [formatter setDateFormat:@"MMMM"];
     return [formatter stringFromDate:[NSDate date]];
@@ -344,7 +345,7 @@ const NSInteger numberOfComponents = 2;
 
 - (NSString *) currentYearName
 {
-    NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 
     [formatter setDateFormat:@"yyyy"];
     return [formatter stringFromDate:[NSDate date]];
