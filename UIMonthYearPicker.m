@@ -244,7 +244,7 @@ const NSInteger numberOfComponents = 2;
 
 - (CGFloat) componentWidth
 {
-    return self.bounds.size.width / numberOfComponents;
+    return CGRectGetWidth(self.bounds) / numberOfComponents;
 }
 
 - (NSString *) titleForRow:(NSInteger)row forComponent:(NSInteger)component
