@@ -6,6 +6,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^UIMonthYearPickerValueChangeBlock)(NSDate *newDate);
+
 @protocol UIMonthYearPickerDelegate
 
 @optional
