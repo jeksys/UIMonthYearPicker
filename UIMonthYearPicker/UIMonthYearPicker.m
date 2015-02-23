@@ -42,8 +42,8 @@
 @implementation UIMonthYearPicker
 
 const NSInteger bigRowCount = 1;
-NSInteger minYear = 2000;
-NSInteger maxYear = 2030;
+NSInteger minYear;
+NSInteger maxYear;
 const CGFloat rowHeight = 44.f;
 const NSInteger numberOfComponents = 2;
 
@@ -56,6 +56,9 @@ const NSInteger numberOfComponents = 2;
 -(void)awakeFromNib
 {
     [super awakeFromNib];
+    
+    minYear = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:[NSDate date]].year;
+    maxYear = minYear + 15;
     
     self.months = [self nameOfMonths];
     self.years = [self nameOfYears];
