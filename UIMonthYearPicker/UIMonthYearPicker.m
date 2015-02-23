@@ -292,7 +292,6 @@ const NSInteger numberOfComponents = 2;
         if([cellMonth isEqualToString:month])
         {
             row = [self.months indexOfObject:cellMonth];
-            row = row + [self bigRowMonthCount] / 2;
             break;
         }
     }
@@ -302,7 +301,6 @@ const NSInteger numberOfComponents = 2;
         if([cellYear isEqualToString:year])
         {
             section = [self.years indexOfObject:cellYear];
-            section = section + [self bigRowYearCount] / 2;
             break;
         }
     }
