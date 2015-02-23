@@ -97,8 +97,8 @@ const NSInteger numberOfComponents = 2;
 
 - (void) setDate:(NSDate *)aDate animated:(BOOL)animated{
     
-    int dateYear;
-    int dateMonth;
+    NSInteger dateYear;
+    NSInteger dateMonth;
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMonthCalendarUnit fromDate:aDate];
     dateMonth = [components month];
@@ -109,7 +109,7 @@ const NSInteger numberOfComponents = 2;
         inComponent: MONTH
            animated: NO];
     
-    int rowIndex = dateYear - minYear;
+    NSInteger rowIndex = dateYear - minYear;
     if (rowIndex < 0) {
         rowIndex = 0;
     }
