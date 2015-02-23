@@ -6,19 +6,21 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^UIMonthYearPickerValueChangeBlock)(NSDate *newDate);
+
 @protocol UIMonthYearPickerDelegate
 
 @optional
-- (void)pickerView:(UIPickerView *)pickerView didChangeDate:(NSDate*)newDate;
+- (void) pickerView:(UIPickerView *)pickerView didChangeDate:(NSDate *)newDate;
 @end
 
 @interface UIMonthYearPicker : UIPickerView <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, weak) id _delegate;
-@property (nonatomic, strong) NSDate *date;
-@property (nonatomic, strong) NSDate *minimumDate;
-@property (nonatomic, strong) NSDate *maximumDate;
+@property (nonatomic, strong) NSDate * date;
+@property (nonatomic, strong) NSDate * minimumDate;
+@property (nonatomic, strong) NSDate * maximumDate;
 
-- (void)selectToday;
+- (void) selectToday;
 
 @end
