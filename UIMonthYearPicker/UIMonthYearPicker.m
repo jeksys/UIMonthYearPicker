@@ -50,6 +50,7 @@ const NSInteger numberOfComponents = 2;
 @synthesize todayIndexPath;
 @synthesize months;
 @synthesize years = _years;
+@synthesize _delegate = _privateDelegate;
 @synthesize maximumDate;
 @synthesize minimumDate;
 
