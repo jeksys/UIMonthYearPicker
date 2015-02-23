@@ -54,10 +54,8 @@ const NSInteger numberOfComponents = 2;
 @synthesize maximumDate;
 @synthesize minimumDate;
 
--(void)awakeFromNib
-{
-    [super awakeFromNib];
-    
+- (void) initializeValues
+{    
     minYear = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:[NSDate date]].year;
     maxYear = minYear + 15;
     
@@ -69,6 +67,21 @@ const NSInteger numberOfComponents = 2;
     
     self.delegate = self;
     self.dataSource = self;
+}
+
+- (void) awakeFromNib
+{
+    [super awakeFromNib];
+    [self initializeValues];
+}
+
+- (instancetype) initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    [self initializeValues];
+    
+    return self;
 }
 
 - (void) setMaximumDate:(NSDate *)aMaximumDate{
