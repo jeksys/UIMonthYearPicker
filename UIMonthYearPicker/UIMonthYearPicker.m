@@ -150,7 +150,7 @@ const NSInteger numberOfComponents = 2;
         NSInteger monthCount = [self.months count];
         NSString *monthName = [self.months objectAtIndex:(row % monthCount)];
         NSString *currentMonthName = [self currentMonthName];
-        if([monthName isEqualToString:currentMonthName] == YES)
+        if([monthName isEqualToString:currentMonthName])
         {
             selected = YES;
         }
@@ -160,7 +160,7 @@ const NSInteger numberOfComponents = 2;
         NSInteger yearCount = [self.years count];
         NSString *yearName = [self.years objectAtIndex:(row % yearCount)];
         NSString *currenrYearName  = [self currentYearName];
-        if([yearName isEqualToString:currenrYearName] == YES)
+        if([yearName isEqualToString:currenrYearName])
         {
             selected = YES;
         }
