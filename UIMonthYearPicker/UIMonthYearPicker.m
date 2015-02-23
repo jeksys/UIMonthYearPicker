@@ -62,6 +62,8 @@ const NSInteger numberOfComponents = 2;
     
     self.months = [self nameOfMonths];
     self.years = [self nameOfYears];
+    [self reloadAllComponents];
+
     self.todayIndexPath = [self todayPath];
     
     self.delegate = self;
