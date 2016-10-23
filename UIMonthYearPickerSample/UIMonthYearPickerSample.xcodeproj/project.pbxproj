@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D552CDD5160949BB0082779B /* UIMonthYearPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = D552CDD4160949BB0082779B /* UIMonthYearPicker.m */; };
+		8001C17338BE192A74984DE7 /* libPods-UIMonthYearPickerSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA1D4D93F6C66E32F5E902E /* libPods-UIMonthYearPickerSample.a */; };
 		D5D29F7B1609459500EA8E60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D29F7A1609459500EA8E60 /* UIKit.framework */; };
 		D5D29F7D1609459500EA8E60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D29F7C1609459500EA8E60 /* Foundation.framework */; };
 		D5D29F7F1609459500EA8E60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D29F7E1609459500EA8E60 /* CoreGraphics.framework */; };
@@ -19,8 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D552CDD3160949BB0082779B /* UIMonthYearPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMonthYearPicker.h; sourceTree = "<group>"; };
-		D552CDD4160949BB0082779B /* UIMonthYearPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMonthYearPicker.m; sourceTree = "<group>"; };
+		3DB9AEFF13E61EC81768BD1E /* Pods-UIMonthYearPickerSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMonthYearPickerSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIMonthYearPickerSample/Pods-UIMonthYearPickerSample.release.xcconfig"; sourceTree = "<group>"; };
+		5FEC5E03672268A3A4FB4648 /* Pods-UIMonthYearPickerSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIMonthYearPickerSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIMonthYearPickerSample/Pods-UIMonthYearPickerSample.debug.xcconfig"; sourceTree = "<group>"; };
+		9DA1D4D93F6C66E32F5E902E /* libPods-UIMonthYearPickerSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIMonthYearPickerSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D29F761609459500EA8E60 /* UIMonthYearPickerSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIMonthYearPickerSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D29F7A1609459500EA8E60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D5D29F7C1609459500EA8E60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,20 +45,20 @@
 				D5D29F7B1609459500EA8E60 /* UIKit.framework in Frameworks */,
 				D5D29F7D1609459500EA8E60 /* Foundation.framework in Frameworks */,
 				D5D29F7F1609459500EA8E60 /* CoreGraphics.framework in Frameworks */,
+				8001C17338BE192A74984DE7 /* libPods-UIMonthYearPickerSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D552CDD2160949BB0082779B /* UIMonthYearPicker */ = {
+		423656FBD5052408B1872976 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D552CDD3160949BB0082779B /* UIMonthYearPicker.h */,
-				D552CDD4160949BB0082779B /* UIMonthYearPicker.m */,
+				5FEC5E03672268A3A4FB4648 /* Pods-UIMonthYearPickerSample.debug.xcconfig */,
+				3DB9AEFF13E61EC81768BD1E /* Pods-UIMonthYearPickerSample.release.xcconfig */,
 			);
-			name = UIMonthYearPicker;
-			path = ../../UIMonthYearPicker;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D5D29F6B1609459500EA8E60 = {
@@ -66,6 +67,7 @@
 				D5D29F801609459500EA8E60 /* UIMonthYearPickerSample */,
 				D5D29F791609459500EA8E60 /* Frameworks */,
 				D5D29F771609459500EA8E60 /* Products */,
+				423656FBD5052408B1872976 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +85,7 @@
 				D5D29F7A1609459500EA8E60 /* UIKit.framework */,
 				D5D29F7C1609459500EA8E60 /* Foundation.framework */,
 				D5D29F7E1609459500EA8E60 /* CoreGraphics.framework */,
+				9DA1D4D93F6C66E32F5E902E /* libPods-UIMonthYearPickerSample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,7 +93,6 @@
 		D5D29F801609459500EA8E60 /* UIMonthYearPickerSample */ = {
 			isa = PBXGroup;
 			children = (
-				D552CDD2160949BB0082779B /* UIMonthYearPicker */,
 				D5D29F891609459500EA8E60 /* SamlpeAppDelegate.h */,
 				D5D29F8A1609459500EA8E60 /* SamlpeAppDelegate.m */,
 				D5D29F8C1609459500EA8E60 /* MainStoryboard.storyboard */,
@@ -119,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5D29F941609459500EA8E60 /* Build configuration list for PBXNativeTarget "UIMonthYearPickerSample" */;
 			buildPhases = (
+				308639D44DF58514B0B5952B /* Check Pods Manifest.lock */,
 				D5D29F721609459500EA8E60 /* Sources */,
 				D5D29F731609459500EA8E60 /* Frameworks */,
 				D5D29F741609459500EA8E60 /* Resources */,
+				E81F5D9ECFC5A808A6A1EC12 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +175,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		308639D44DF58514B0B5952B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E81F5D9ECFC5A808A6A1EC12 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIMonthYearPickerSample/Pods-UIMonthYearPickerSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5D29F721609459500EA8E60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -179,7 +216,6 @@
 				D5D29F871609459500EA8E60 /* main.m in Sources */,
 				D5D29F8B1609459500EA8E60 /* SamlpeAppDelegate.m in Sources */,
 				D5D29F911609459500EA8E60 /* SamlpeViewController.m in Sources */,
-				D552CDD5160949BB0082779B /* UIMonthYearPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +292,7 @@
 		};
 		D5D29F951609459500EA8E60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FEC5E03672268A3A4FB4648 /* Pods-UIMonthYearPickerSample.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIMonthYearPickerSample/UIMonthYearPickerSample-Prefix.pch";
@@ -267,6 +304,7 @@
 		};
 		D5D29F961609459500EA8E60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB9AEFF13E61EC81768BD1E /* Pods-UIMonthYearPickerSample.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIMonthYearPickerSample/UIMonthYearPickerSample-Prefix.pch";

@@ -1,0 +1,14 @@
+PODS:
+  - UIMonthYearPicker (1.0)
+
+DEPENDENCIES:
+  - UIMonthYearPicker (from `../`)
+
+EXTERNAL SOURCES:
+  UIMonthYearPicker:
+    :path: ../
+
+SPEC CHECKSUMS:
+  UIMonthYearPicker: 1f75c52a8b386b58d08fa8aff03b9fac79d2711c
+
+COCOAPODS: 0.35.0
